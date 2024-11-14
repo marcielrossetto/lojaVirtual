@@ -1,0 +1,661 @@
+
+header, footer {
+    text-align: center;
+    background-color: #f8f8f8;
+    
+}
+
+.banner, .produtos {
+    text-align: center;
+    margin: 20px;
+}
+
+.produto {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #f1f1f1;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.contact-info span {
+    margin-left: 10px;
+}
+
+.nav-bar {
+    background-color: #ffd700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons span {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.menu {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.menu span {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.sidebar { 
+    width: 20%; 
+    padding: 20px; 
+    background-color: #f4f4f4; 
+    margin-top: 10px;
+} 
+.sidebar h2 { 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+} 
+.sidebar ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
+.sidebar ul li { 
+    margin-bottom: 10px; 
+} 
+.main-content { 
+    width: 80%; 
+    padding: 20px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+} 
+.containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(25% - 20px); /* Ajuste para caber 4 cartões por linha */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #e60000;
+    margin: 10px 0;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para Responsividade */
+
+.container {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse a largura do contêiner */
+    display: flex;
+}
+
+.slideshow {
+    display: flex;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    animation: slide 40s linear infinite; /* Animação contínua */
+}
+
+.slides img {
+    max-height: 200px; /* Ajuste automático da altura para manter a proporção */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%); /* Ajuste para deslizar por todos os slides */
+    }
+}
+
+
+
+
+/* Estilo para a área de conteúdo principal */
+.content {
+    width: 60%;
+    padding: 20px;
+}
+
+/* Adiciona controles de navegação no slide */
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    transform: translateY(-50%);
+}
+
+.slide-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+/* Estilo padrão para menu em telas grandes */
+.menu {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+}
+
+/* Estilo para o ícone de 3 pontinhos */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo para o menu mobile (inicialmente oculto) */
+.mobile-menu {
+    display:none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+/* Estilo padrão para o menu em telas grandes */
+.menu {
+    display: flex;
+    gap: 15px;
+    font-size: 0.6em;
+}
+
+/* Estilo para o ícone de três barrinhas */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para o menu mobile (inicialmente oculto) */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.containersidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+/* Container de cartões de produtos */
+.containerCard {
+    flex: 1;
+    padding: 0px;
+    justify-content:center
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(25% - 10px); /* Ajuste para caber 4 cartões por linha */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #e60000;
+    margin: 10px 0;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 cartões por linha */
+    }
+    .containerCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Alinha horizontalmente no centro */
+        align-items: center; /* Alinha verticalmente no centro */
+        height: 100vh; /* A altura ocupa toda a altura da tela */
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .product-card {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        width: 80%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-color: #dcdee0;
+        justify-content: center;
+    }
+    .sidebar{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    /* Menu Hamburguer */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* As barras do menu hamburguer */
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Menu mobile escondido por padrão */
+.mobile-menu {
+    display: none; /* Menu escondido por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Mostrar menu quando ativado */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Botão de fechar (X) */
+.mobile-menu .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Animação para o ícone de "X" */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsividade */
+
+    
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        width: calc(100% - 20px); /* 1 cartão por linha */
+    }
+    .top-bar{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .containerCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Alinha horizontalmente no centro */
+        align-items: center; /* Alinha verticalmente no centro */
+        height: 100vh; /* A altura ocupa toda a altura da tela */
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .product-card {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        justify-content: center;
+    }
+    
+    .product-card img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .product-card h3 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .product-card p {
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .product-card .price {
+        font-size: 18px;
+        color: #e60000;
+        margin: 10px 0;
+    }
+    
+    .product-card button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .menu{
+        display: none;
+    }
+
+    /* Menu Hamburguer */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* As barras do menu hamburguer */
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Menu mobile escondido por padrão */
+.mobile-menu {
+    display: none; /* Menu escondido por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Mostrar menu quando ativado */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Botão de fechar (X) */
+.mobile-menu .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Animação para o ícone de "X" */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+}

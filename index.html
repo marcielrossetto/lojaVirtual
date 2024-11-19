@@ -25,10 +25,18 @@
                     <button type="button">🔍</button>
                 </div>
                 <div class="icons">
-                    <span>❤️</span>
-                    <span>🛒 0 - R$ 0,00</span>
-                </div>
+                    <span id="total">0 - R$ 0,00</span>
+                  </div>
             </div>
+            <!-- Janela modal para exibir os produtos selecionados -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close">&times;</span>
+      <h2>Produtos Selecionados</h2>
+      <ul id="lista-produtos-modal"></ul>
+      <p id="total-modal"></p>
+    </div>
+  </div>
             </header>
 
             <video autoplay loop muted poster="imagens/large.mp4" id="video-fundo">
@@ -85,28 +93,7 @@
                 <img src="imagens/relogio1.webp" alt="Slide 3">
                 <img src="imagens/fone.webp" alt="Slide 1">
                 <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
-                <img src="imagens/fone.webp" alt="Slide 1">
-                <img src="imagens/fone2.webp" alt="Slide 2">
-                <img src="imagens/relogio1.webp" alt="Slide 3">
+
             </div>
         </div>    
     </div>
@@ -132,328 +119,148 @@
         </div>
         <div class="containerCard">
             <div class="main-content">
-                <div class="prductR">
+              <div class="prductR">
                 <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
+     
+         
+                
             </div>
-                <div class="prductR">
-                <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+              <div class="prductR">
+                              <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
+  
+        
             </div>
-                <div class="prductR">
-                <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+              <div class="prductR">
+                              <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+ 
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="42.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 42,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+ 
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="89.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 89,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+ 
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="150.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 150,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+ 
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="73.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 73,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
+ 
+                <div class="product-wrapper" data-nome="Produto 3" data-preco="58.00" data-imagem="imagens/relogio1.webp">
+                  <img src="imagens/relogio1.webp" alt="Produto 3" class="product-image"> 
+                  <h3 class="product-title">Produto 3</h3> 
+                  <p class="product-description">Descrição do Produto 3: Um produto excelente para você!</p> 
+                  <div class="product-price">R$ 58,00</div> 
+                  <button class="buy-button">Comprar</button> 
                 </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
+ 
+        
             </div>
-                <div class="prductR">
-                <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
             </div>
-                <div class="prductR">
-                <!-- Exemplo de cartão de produto. Repita este bloco para cada produto. -->
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-                <div class="product-card">
-                    <img src="imagens/relogio1.webp" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1</p>
-                    <p class="price">R$ 249,00</p>
-                    <button>Comprar</button>
-                </div>
-            </div>
-               
-                <!-- Adicione mais cartões de produto conforme necessário -->
-            </div>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+          </div>
+          <script src="script.js"></script>
 </body>
 </html>

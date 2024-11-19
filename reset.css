@@ -1,0 +1,47 @@
+/* reset.css */
+
+/* Remove margens, paddings e bordas padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Remove estilos de listas */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove sublinhados de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Reseta tamanho da fonte e estilos de parágrafo */
+  body, h1, h2, h3, h4, h5, h6, p {
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  
+  /* Reseta estilos de botões */
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Remove bordas e padding de inputs e textareas */
+  input, textarea {
+    border: none;
+    outline: none;
+    font: inherit;
+  }
+  
+  /* Força bordas colapsadas em tabelas */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  

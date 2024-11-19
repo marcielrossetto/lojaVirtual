@@ -7,7 +7,7 @@
   }
   
   .product-card {
-    min-width: 280px;
+    min-width: 2000px;
     flex-shrink: 0;
     background-color: #fff;
     padding: 20px;
